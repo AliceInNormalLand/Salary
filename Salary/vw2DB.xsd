@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="vw2DB" targetNamespace="http://tempuri.org/vw2DB.xsd" xmlns:mstns="http://tempuri.org/vw2DB.xsd" xmlns="http://tempuri.org/vw2DB.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HRPayrollDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HRPayrollDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Salary.Properties.Settings.GlobalReference.Default.HRPayrollDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwTK1vaTK2TableAdapter" GeneratorDataComponentClassName="vwTK1vaTK2TableAdapter" Name="vwTK1vaTK2" UserDataComponentName="vwTK1vaTK2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HRPayrollDBConnectionString (Settings)" DbObjectName="HRPayrollDB.dbo.vwTK1vaTK2" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CombinedColumn, TenTK, TinhChat, LoaiTK FROM dbo.vwTK1vaTK2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CombinedColumn" DataSetColumn="CombinedColumn" />
+              <Mapping SourceColumn="TenTK" DataSetColumn="TenTK" />
+              <Mapping SourceColumn="TinhChat" DataSetColumn="TinhChat" />
+              <Mapping SourceColumn="LoaiTK" DataSetColumn="LoaiTK" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="vw2DB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="vw2DB" msprop:Generator_UserDSName="vw2DB">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwTK1vaTK2" msprop:Generator_TableClassName="vwTK1vaTK2DataTable" msprop:Generator_TableVarName="tablevwTK1vaTK2" msprop:Generator_TablePropName="vwTK1vaTK2" msprop:Generator_RowDeletingName="vwTK1vaTK2RowDeleting" msprop:Generator_RowChangingName="vwTK1vaTK2RowChanging" msprop:Generator_RowEvHandlerName="vwTK1vaTK2RowChangeEventHandler" msprop:Generator_RowDeletedName="vwTK1vaTK2RowDeleted" msprop:Generator_UserTableName="vwTK1vaTK2" msprop:Generator_RowChangedName="vwTK1vaTK2RowChanged" msprop:Generator_RowEvArgName="vwTK1vaTK2RowChangeEvent" msprop:Generator_RowClassName="vwTK1vaTK2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CombinedColumn" msprop:Generator_ColumnVarNameInTable="columnCombinedColumn" msprop:Generator_ColumnPropNameInRow="CombinedColumn" msprop:Generator_ColumnPropNameInTable="CombinedColumnColumn" msprop:Generator_UserColumnName="CombinedColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenTK" msprop:Generator_ColumnVarNameInTable="columnTenTK" msprop:Generator_ColumnPropNameInRow="TenTK" msprop:Generator_ColumnPropNameInTable="TenTKColumn" msprop:Generator_UserColumnName="TenTK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TinhChat" msprop:Generator_ColumnVarNameInTable="columnTinhChat" msprop:Generator_ColumnPropNameInRow="TinhChat" msprop:Generator_ColumnPropNameInTable="TinhChatColumn" msprop:Generator_UserColumnName="TinhChat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoaiTK" msprop:Generator_ColumnVarNameInTable="columnLoaiTK" msprop:Generator_ColumnPropNameInRow="LoaiTK" msprop:Generator_ColumnPropNameInTable="LoaiTKColumn" msprop:Generator_UserColumnName="LoaiTK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

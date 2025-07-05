@@ -1,0 +1,1277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB5F0C68-22B0-4871-8230-1FEF7342F5F4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Salary</RootNamespace>
+    <AssemblyName>Salary</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EPPlus, Version=7.0.3.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.7.0.3\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bangluong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bangluong.Designer.cs">
+      <DependentUpon>Bangluong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BangLuong2DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BangLuong2DB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BangLuongDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BangLuongDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaohiemvaCongdoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaohiemvaCongdoan.Designer.cs">
+      <DependentUpon>BaohiemvaCongdoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHvaCD2DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BHvaCD2DB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BHvaCDDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BHvaCDDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ButToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButToan.Designer.cs">
+      <DependentUpon>ButToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButToanDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ButToanDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCong.Designer.cs">
+      <DependentUpon>ChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChamCongDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChamCongDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChamDiemDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChamDiemDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietTDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietTDG.Designer.cs">
+      <DependentUpon>ChitietTDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietLCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietLCS.Designer.cs">
+      <DependentUpon>ChitietLCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietQDTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietQDTT.Designer.cs">
+      <DependentUpon>ChitietQDTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietDG.Designer.cs">
+      <DependentUpon>ChitietDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietTKC1DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChiTietTKC1DB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietTKC2DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChitietTKC2DB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietTKDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietTKDN.Designer.cs">
+      <DependentUpon>ChiTietTKDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietUNC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietUNC.Designer.cs">
+      <DependentUpon>ChitietUNC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhapDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DangNhapDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DanhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhGia.Designer.cs">
+      <DependentUpon>DanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhGiaDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DanhGiaDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DanhmucTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhmucTK.Designer.cs">
+      <DependentUpon>DanhmucTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DMTKC1DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMTKC1DB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DMTKC2DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMTKC2DB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsBangLuong.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBangLuong.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsChamDiemCC.cs">
+      <DependentUpon>dsChamDiemCC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsChamDiemCC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsChamDiemCC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsChiTietTK2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsChiTietTK2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsGiamTruGiaCanh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGiamTruGiaCanh.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsThueTNCN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsThueTNCN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmGiamTruGiaCanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiamTruGiaCanh.Designer.cs">
+      <DependentUpon>frmGiamTruGiaCanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInBangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInBangLuong.Designer.cs">
+      <DependentUpon>frmInBangLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInBaoHiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInBaoHiem.Designer.cs">
+      <DependentUpon>frmInBaoHiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInChamDiemCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInChamDiemCC.Designer.cs">
+      <DependentUpon>frmInChamDiemCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInChiTietTK2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInChiTietTK2.Designer.cs">
+      <DependentUpon>frmInChiTietTK2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInThueTNCN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInThueTNCN.Designer.cs">
+      <DependentUpon>frmInThueTNCN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiamTruGiaCanhDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GiamTruGiaCanhDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HopDongLDDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HopDongLDDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HTTKC1DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HTTKC1DB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HTTKC2DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HTTKC2DB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LuongCNDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LuongCNDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LuongCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LuongCS.Designer.cs">
+      <DependentUpon>LuongCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietHD.Designer.cs">
+      <DependentUpon>ChitietHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietLogin.Designer.cs">
+      <DependentUpon>ChitietLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietLTTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietLTTV.Designer.cs">
+      <DependentUpon>ChitietLTTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietNPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietNPT.Designer.cs">
+      <DependentUpon>ChitietNPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietNS.Designer.cs">
+      <DependentUpon>ChitietNS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietTKC1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietTKC1.Designer.cs">
+      <DependentUpon>ChitietTKC1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietTKC2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietTKC2.Designer.cs">
+      <DependentUpon>ChitietTKC2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietTKNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietTKNH.Designer.cs">
+      <DependentUpon>ChitietTKNH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietCD.Designer.cs">
+      <DependentUpon>ChitietCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietTU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietTU.Designer.cs">
+      <DependentUpon>ChitietTU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chucvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chucvu.Designer.cs">
+      <DependentUpon>Chucvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChucVuDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChucVuDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChamDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamDiem.Designer.cs">
+      <DependentUpon>ChamDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giamtrugiacanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giamtrugiacanh.Designer.cs">
+      <DependentUpon>Giamtrugiacanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hopdong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hopdong.Designer.cs">
+      <DependentUpon>Hopdong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectSQL.cs" />
+    <Compile Include="Dangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dangnhap.Designer.cs">
+      <DependentUpon>Dangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Luongcanhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Luongcanhan.Designer.cs">
+      <DependentUpon>Luongcanhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LuongCSDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LuongCSDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LuongTTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LuongTTV.Designer.cs">
+      <DependentUpon>LuongTTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainform.Designer.cs">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiPhuThuocDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NguoiPhuThuocDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Nhansu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nhansu.Designer.cs">
+      <DependentUpon>Nhansu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVienDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NhanVienDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Phongban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phongban.Designer.cs">
+      <DependentUpon>Phongban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhongBanDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhongBanDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuyDinhTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuyDinhTT.Designer.cs">
+      <DependentUpon>QuyDinhTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuyDinhTTDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuyDinhTTDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RBTVBangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RBTVBangLuong.Designer.cs">
+      <DependentUpon>RBTVBangLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptBangLuong.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBangLuong.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptBaoHiem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBaoHiem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptChamDiemCC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptChamDiemCC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptGiamTruGiaCanh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGiamTruGiaCanh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptSoChiTiet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSoChiTiet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptThueTNCN.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptThueTNCN.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TaikhoanC1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaikhoanC1.Designer.cs">
+      <DependentUpon>TaikhoanC1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaikhoanC2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaikhoanC2.Designer.cs">
+      <DependentUpon>TaikhoanC2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaikhoanDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaikhoanDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TaikhoanDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaikhoanDN.Designer.cs">
+      <DependentUpon>TaikhoanDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoanNHDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaiKhoanNHDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TamUng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TamUng.Designer.cs">
+      <DependentUpon>TamUng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TamUngDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TamUngDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ThangDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThangDG.Designer.cs">
+      <DependentUpon>ThangDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThangDGDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThangDGDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ThueTNCN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThueTNCN.Designer.cs">
+      <DependentUpon>ThueTNCN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThueTNCN2DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThueTNCN2DB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ThueTNCNDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThueTNCNDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TKNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TKNH.Designer.cs">
+      <DependentUpon>TKNH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToiThieuVungDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToiThieuVungDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UyNhiemChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyNhiemChi.Designer.cs">
+      <DependentUpon>UyNhiemChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UyNhiemChiDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UyNhiemChiDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="vw2DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vw2DB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="vwTKC1vaTKC2DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwTKC1vaTKC2DB.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bangluong.resx">
+      <DependentUpon>Bangluong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaohiemvaCongdoan.resx">
+      <DependentUpon>BaohiemvaCongdoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButToan.resx">
+      <DependentUpon>ButToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChamCong.resx">
+      <DependentUpon>ChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietTDG.resx">
+      <DependentUpon>ChitietTDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietLCS.resx">
+      <DependentUpon>ChitietLCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietQDTT.resx">
+      <DependentUpon>ChitietQDTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietDG.resx">
+      <DependentUpon>ChitietDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietTKDN.resx">
+      <DependentUpon>ChiTietTKDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietUNC.resx">
+      <DependentUpon>ChitietUNC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhGia.resx">
+      <DependentUpon>DanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhmucTK.resx">
+      <DependentUpon>DanhmucTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGiamTruGiaCanh.resx">
+      <DependentUpon>frmGiamTruGiaCanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInBangLuong.resx">
+      <DependentUpon>frmInBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInBaoHiem.resx">
+      <DependentUpon>frmInBaoHiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInChamDiemCC.resx">
+      <DependentUpon>frmInChamDiemCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInChiTietTK2.resx">
+      <DependentUpon>frmInChiTietTK2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInThueTNCN.resx">
+      <DependentUpon>frmInThueTNCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuongCS.resx">
+      <DependentUpon>LuongCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietHD.resx">
+      <DependentUpon>ChitietHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietLogin.resx">
+      <DependentUpon>ChitietLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietLTTV.resx">
+      <DependentUpon>ChitietLTTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietNPT.resx">
+      <DependentUpon>ChitietNPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietNS.resx">
+      <DependentUpon>ChitietNS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietTKC1.resx">
+      <DependentUpon>ChitietTKC1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietTKC2.resx">
+      <DependentUpon>ChitietTKC2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietTKNH.resx">
+      <DependentUpon>ChitietTKNH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietCD.resx">
+      <DependentUpon>ChitietCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietTU.resx">
+      <DependentUpon>ChitietTU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chucvu.resx">
+      <DependentUpon>Chucvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChamDiem.resx">
+      <DependentUpon>ChamDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giamtrugiacanh.resx">
+      <DependentUpon>Giamtrugiacanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hopdong.resx">
+      <DependentUpon>Hopdong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dangnhap.resx">
+      <DependentUpon>Dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Luongcanhan.resx">
+      <DependentUpon>Luongcanhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuongTTV.resx">
+      <DependentUpon>LuongTTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainform.resx">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhansu.resx">
+      <DependentUpon>Nhansu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phongban.resx">
+      <DependentUpon>Phongban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuyDinhTT.resx">
+      <DependentUpon>QuyDinhTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBTVBangLuong.resx">
+      <DependentUpon>RBTVBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBangLuong.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBangLuong.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBaoHiem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBaoHiem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptChamDiemCC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptChamDiemCC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptGiamTruGiaCanh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGiamTruGiaCanh.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSoChiTiet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSoChiTiet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptThueTNCN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptThueTNCN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaikhoanC1.resx">
+      <DependentUpon>TaikhoanC1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaikhoanC2.resx">
+      <DependentUpon>TaikhoanC2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaikhoanDN.resx">
+      <DependentUpon>TaikhoanDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TamUng.resx">
+      <DependentUpon>TamUng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThangDG.resx">
+      <DependentUpon>ThangDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThueTNCN.resx">
+      <DependentUpon>ThueTNCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TKNH.resx">
+      <DependentUpon>TKNH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UyNhiemChi.resx">
+      <DependentUpon>UyNhiemChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BangLuong2DB.xsc">
+      <DependentUpon>BangLuong2DB.xsd</DependentUpon>
+    </None>
+    <None Include="BangLuong2DB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BangLuong2DB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BangLuong2DB.xss">
+      <DependentUpon>BangLuong2DB.xsd</DependentUpon>
+    </None>
+    <None Include="BangLuongDB.xsc">
+      <DependentUpon>BangLuongDB.xsd</DependentUpon>
+    </None>
+    <None Include="BangLuongDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BangLuongDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BangLuongDB.xss">
+      <DependentUpon>BangLuongDB.xsd</DependentUpon>
+    </None>
+    <None Include="BHvaCD2DB.xsc">
+      <DependentUpon>BHvaCD2DB.xsd</DependentUpon>
+    </None>
+    <None Include="BHvaCD2DB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BHvaCD2DB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BHvaCD2DB.xss">
+      <DependentUpon>BHvaCD2DB.xsd</DependentUpon>
+    </None>
+    <None Include="BHvaCDDB.xsc">
+      <DependentUpon>BHvaCDDB.xsd</DependentUpon>
+    </None>
+    <None Include="BHvaCDDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BHvaCDDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BHvaCDDB.xss">
+      <DependentUpon>BHvaCDDB.xsd</DependentUpon>
+    </None>
+    <None Include="ButToanDB.xsc">
+      <DependentUpon>ButToanDB.xsd</DependentUpon>
+    </None>
+    <None Include="ButToanDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ButToanDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ButToanDB.xss">
+      <DependentUpon>ButToanDB.xsd</DependentUpon>
+    </None>
+    <None Include="ChamCongDB.xsc">
+      <DependentUpon>ChamCongDB.xsd</DependentUpon>
+    </None>
+    <None Include="ChamCongDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChamCongDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChamCongDB.xss">
+      <DependentUpon>ChamCongDB.xsd</DependentUpon>
+    </None>
+    <None Include="ChamDiemDB.xsc">
+      <DependentUpon>ChamDiemDB.xsd</DependentUpon>
+    </None>
+    <None Include="ChamDiemDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChamDiemDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChamDiemDB.xss">
+      <DependentUpon>ChamDiemDB.xsd</DependentUpon>
+    </None>
+    <None Include="ChiTietTKC1DB.xsc">
+      <DependentUpon>ChiTietTKC1DB.xsd</DependentUpon>
+    </None>
+    <None Include="ChiTietTKC1DB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChiTietTKC1DB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChiTietTKC1DB.xss">
+      <DependentUpon>ChiTietTKC1DB.xsd</DependentUpon>
+    </None>
+    <None Include="ChitietTKC2DB.xsc">
+      <DependentUpon>ChitietTKC2DB.xsd</DependentUpon>
+    </None>
+    <None Include="ChitietTKC2DB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChitietTKC2DB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChitietTKC2DB.xss">
+      <DependentUpon>ChitietTKC2DB.xsd</DependentUpon>
+    </None>
+    <None Include="ChucVuDB.xsc">
+      <DependentUpon>ChucVuDB.xsd</DependentUpon>
+    </None>
+    <None Include="ChucVuDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChucVuDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChucVuDB.xss">
+      <DependentUpon>ChucVuDB.xsd</DependentUpon>
+    </None>
+    <None Include="DangNhapDB.xsc">
+      <DependentUpon>DangNhapDB.xsd</DependentUpon>
+    </None>
+    <None Include="DangNhapDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DangNhapDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DangNhapDB.xss">
+      <DependentUpon>DangNhapDB.xsd</DependentUpon>
+    </None>
+    <None Include="DanhGiaDB.xsc">
+      <DependentUpon>DanhGiaDB.xsd</DependentUpon>
+    </None>
+    <None Include="DanhGiaDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DanhGiaDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DanhGiaDB.xss">
+      <DependentUpon>DanhGiaDB.xsd</DependentUpon>
+    </None>
+    <None Include="DMTKC1DB.xsc">
+      <DependentUpon>DMTKC1DB.xsd</DependentUpon>
+    </None>
+    <None Include="DMTKC1DB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DMTKC1DB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DMTKC1DB.xss">
+      <DependentUpon>DMTKC1DB.xsd</DependentUpon>
+    </None>
+    <None Include="DMTKC2DB.xsc">
+      <DependentUpon>DMTKC2DB.xsd</DependentUpon>
+    </None>
+    <None Include="DMTKC2DB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DMTKC2DB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DMTKC2DB.xss">
+      <DependentUpon>DMTKC2DB.xsd</DependentUpon>
+    </None>
+    <None Include="dsBangLuong.xsc">
+      <DependentUpon>dsBangLuong.xsd</DependentUpon>
+    </None>
+    <None Include="dsBangLuong.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBangLuong.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsBangLuong.xss">
+      <DependentUpon>dsBangLuong.xsd</DependentUpon>
+    </None>
+    <None Include="dsChamDiemCC.xsc">
+      <DependentUpon>dsChamDiemCC.xsd</DependentUpon>
+    </None>
+    <None Include="dsChamDiemCC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsChamDiemCC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsChamDiemCC.xss">
+      <DependentUpon>dsChamDiemCC.xsd</DependentUpon>
+    </None>
+    <None Include="dsChiTietTK2.xsc">
+      <DependentUpon>dsChiTietTK2.xsd</DependentUpon>
+    </None>
+    <None Include="dsChiTietTK2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsChiTietTK2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsChiTietTK2.xss">
+      <DependentUpon>dsChiTietTK2.xsd</DependentUpon>
+    </None>
+    <None Include="dsGiamTruGiaCanh.xsc">
+      <DependentUpon>dsGiamTruGiaCanh.xsd</DependentUpon>
+    </None>
+    <None Include="dsGiamTruGiaCanh.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGiamTruGiaCanh.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsGiamTruGiaCanh.xss">
+      <DependentUpon>dsGiamTruGiaCanh.xsd</DependentUpon>
+    </None>
+    <None Include="dsThueTNCN.xsc">
+      <DependentUpon>dsThueTNCN.xsd</DependentUpon>
+    </None>
+    <None Include="dsThueTNCN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsThueTNCN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsThueTNCN.xss">
+      <DependentUpon>dsThueTNCN.xsd</DependentUpon>
+    </None>
+    <None Include="GiamTruGiaCanhDB.xsc">
+      <DependentUpon>GiamTruGiaCanhDB.xsd</DependentUpon>
+    </None>
+    <None Include="GiamTruGiaCanhDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GiamTruGiaCanhDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GiamTruGiaCanhDB.xss">
+      <DependentUpon>GiamTruGiaCanhDB.xsd</DependentUpon>
+    </None>
+    <None Include="HopDongLDDB.xsc">
+      <DependentUpon>HopDongLDDB.xsd</DependentUpon>
+    </None>
+    <None Include="HopDongLDDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HopDongLDDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HopDongLDDB.xss">
+      <DependentUpon>HopDongLDDB.xsd</DependentUpon>
+    </None>
+    <None Include="HTTKC1DB.xsc">
+      <DependentUpon>HTTKC1DB.xsd</DependentUpon>
+    </None>
+    <None Include="HTTKC1DB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HTTKC1DB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HTTKC1DB.xss">
+      <DependentUpon>HTTKC1DB.xsd</DependentUpon>
+    </None>
+    <None Include="HTTKC2DB.xsc">
+      <DependentUpon>HTTKC2DB.xsd</DependentUpon>
+    </None>
+    <None Include="HTTKC2DB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HTTKC2DB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HTTKC2DB.xss">
+      <DependentUpon>HTTKC2DB.xsd</DependentUpon>
+    </None>
+    <None Include="LuongCNDB.xsc">
+      <DependentUpon>LuongCNDB.xsd</DependentUpon>
+    </None>
+    <None Include="LuongCNDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LuongCNDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LuongCNDB.xss">
+      <DependentUpon>LuongCNDB.xsd</DependentUpon>
+    </None>
+    <None Include="LuongCSDB.xsc">
+      <DependentUpon>LuongCSDB.xsd</DependentUpon>
+    </None>
+    <None Include="LuongCSDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LuongCSDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LuongCSDB.xss">
+      <DependentUpon>LuongCSDB.xsd</DependentUpon>
+    </None>
+    <None Include="NguoiPhuThuocDB.xsc">
+      <DependentUpon>NguoiPhuThuocDB.xsd</DependentUpon>
+    </None>
+    <None Include="NguoiPhuThuocDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NguoiPhuThuocDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NguoiPhuThuocDB.xss">
+      <DependentUpon>NguoiPhuThuocDB.xsd</DependentUpon>
+    </None>
+    <None Include="NhanVienDB.xsc">
+      <DependentUpon>NhanVienDB.xsd</DependentUpon>
+    </None>
+    <None Include="NhanVienDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NhanVienDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NhanVienDB.xss">
+      <DependentUpon>NhanVienDB.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PhongBanDB.xsc">
+      <DependentUpon>PhongBanDB.xsd</DependentUpon>
+    </None>
+    <None Include="PhongBanDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhongBanDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PhongBanDB.xss">
+      <DependentUpon>PhongBanDB.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QuyDinhTTDB.xsc">
+      <DependentUpon>QuyDinhTTDB.xsd</DependentUpon>
+    </None>
+    <None Include="QuyDinhTTDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuyDinhTTDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuyDinhTTDB.xss">
+      <DependentUpon>QuyDinhTTDB.xsd</DependentUpon>
+    </None>
+    <None Include="TaikhoanDB.xsc">
+      <DependentUpon>TaikhoanDB.xsd</DependentUpon>
+    </None>
+    <None Include="TaikhoanDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaikhoanDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TaikhoanDB.xss">
+      <DependentUpon>TaikhoanDB.xsd</DependentUpon>
+    </None>
+    <None Include="TaiKhoanNHDB.xsc">
+      <DependentUpon>TaiKhoanNHDB.xsd</DependentUpon>
+    </None>
+    <None Include="TaiKhoanNHDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaiKhoanNHDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TaiKhoanNHDB.xss">
+      <DependentUpon>TaiKhoanNHDB.xsd</DependentUpon>
+    </None>
+    <None Include="TamUngDB.xsc">
+      <DependentUpon>TamUngDB.xsd</DependentUpon>
+    </None>
+    <None Include="TamUngDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TamUngDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TamUngDB.xss">
+      <DependentUpon>TamUngDB.xsd</DependentUpon>
+    </None>
+    <None Include="ThangDGDB.xsc">
+      <DependentUpon>ThangDGDB.xsd</DependentUpon>
+    </None>
+    <None Include="ThangDGDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ThangDGDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ThangDGDB.xss">
+      <DependentUpon>ThangDGDB.xsd</DependentUpon>
+    </None>
+    <None Include="ThueTNCN2DB.xsc">
+      <DependentUpon>ThueTNCN2DB.xsd</DependentUpon>
+    </None>
+    <None Include="ThueTNCN2DB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ThueTNCN2DB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ThueTNCN2DB.xss">
+      <DependentUpon>ThueTNCN2DB.xsd</DependentUpon>
+    </None>
+    <None Include="ThueTNCNDB.xsc">
+      <DependentUpon>ThueTNCNDB.xsd</DependentUpon>
+    </None>
+    <None Include="ThueTNCNDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ThueTNCNDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ThueTNCNDB.xss">
+      <DependentUpon>ThueTNCNDB.xsd</DependentUpon>
+    </None>
+    <None Include="ToiThieuVungDB.xsc">
+      <DependentUpon>ToiThieuVungDB.xsd</DependentUpon>
+    </None>
+    <None Include="ToiThieuVungDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ToiThieuVungDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ToiThieuVungDB.xss">
+      <DependentUpon>ToiThieuVungDB.xsd</DependentUpon>
+    </None>
+    <None Include="UyNhiemChiDB.xsc">
+      <DependentUpon>UyNhiemChiDB.xsd</DependentUpon>
+    </None>
+    <None Include="UyNhiemChiDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UyNhiemChiDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UyNhiemChiDB.xss">
+      <DependentUpon>UyNhiemChiDB.xsd</DependentUpon>
+    </None>
+    <None Include="vw2DB.xsc">
+      <DependentUpon>vw2DB.xsd</DependentUpon>
+    </None>
+    <None Include="vw2DB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vw2DB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vw2DB.xss">
+      <DependentUpon>vw2DB.xsd</DependentUpon>
+    </None>
+    <None Include="vwTKC1vaTKC2DB.xsc">
+      <DependentUpon>vwTKC1vaTKC2DB.xsd</DependentUpon>
+    </None>
+    <None Include="vwTKC1vaTKC2DB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwTKC1vaTKC2DB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vwTKC1vaTKC2DB.xss">
+      <DependentUpon>vwTKC1vaTKC2DB.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon-vfl1123[1].ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nen-xanh-duong-pastel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spreadsheet.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\import.png" />
+    <None Include="Resources\magnifying-glass.png" />
+    <None Include="Resources\LOGO DUNG NEN XANH.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\blue.jpg" />
+    <None Include="Resources\%24this.BackgroundImage.jpg" />
+    <Content Include="Resources\file-edit.png" />
+    <None Include="Resources\file-edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsGiamTruGiaCanh" targetNamespace="http://tempuri.org/dsGiamTruGiaCanh.xsd" xmlns:mstns="http://tempuri.org/dsGiamTruGiaCanh.xsd" xmlns="http://tempuri.org/dsGiamTruGiaCanh.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsGiamTruGiaCanh" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsGiamTruGiaCanh" msprop:Generator_UserDSName="dsGiamTruGiaCanh">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsGiamTruGiaCanh" msprop:Generator_TableClassName="dsGiamTruGiaCanhDataTable" msprop:Generator_TableVarName="tabledsGiamTruGiaCanh" msprop:Generator_RowChangedName="dsGiamTruGiaCanhRowChanged" msprop:Generator_TablePropName="_dsGiamTruGiaCanh" msprop:Generator_RowDeletingName="dsGiamTruGiaCanhRowDeleting" msprop:Generator_RowChangingName="dsGiamTruGiaCanhRowChanging" msprop:Generator_RowEvHandlerName="dsGiamTruGiaCanhRowChangeEventHandler" msprop:Generator_RowDeletedName="dsGiamTruGiaCanhRowDeleted" msprop:Generator_RowClassName="dsGiamTruGiaCanhRow" msprop:Generator_UserTableName="dsGiamTruGiaCanh" msprop:Generator_RowEvArgName="dsGiamTruGiaCanhRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TenNV" msprop:Generator_ColumnVarNameInTable="columnTenNV" msprop:Generator_ColumnPropNameInRow="TenNV" msprop:Generator_ColumnPropNameInTable="TenNVColumn" msprop:Generator_UserColumnName="TenNV" type="xs:string" minOccurs="0" />
+              <xs:element name="NgayLap" msprop:Generator_ColumnVarNameInTable="columnNgayLap" msprop:Generator_ColumnPropNameInRow="NgayLap" msprop:Generator_ColumnPropNameInTable="NgayLapColumn" msprop:Generator_UserColumnName="NgayLap" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TongNPT" msprop:Generator_ColumnVarNameInTable="columnTongNPT" msprop:Generator_ColumnPropNameInRow="TongNPT" msprop:Generator_ColumnPropNameInTable="TongNPTColumn" msprop:Generator_UserColumnName="TongNPT" type="xs:int" minOccurs="0" />
+              <xs:element name="TongGTNPT" msprop:Generator_ColumnVarNameInTable="columnTongGTNPT" msprop:Generator_ColumnPropNameInRow="TongGTNPT" msprop:Generator_ColumnPropNameInTable="TongGTNPTColumn" msprop:Generator_UserColumnName="TongGTNPT" type="xs:int" minOccurs="0" />
+              <xs:element name="TongGTCN" msprop:Generator_ColumnVarNameInTable="columnTongGTCN" msprop:Generator_ColumnPropNameInRow="TongGTCN" msprop:Generator_ColumnPropNameInTable="TongGTCNColumn" msprop:Generator_UserColumnName="TongGTCN" type="xs:int" minOccurs="0" />
+              <xs:element name="TongGTGC" msprop:Generator_ColumnVarNameInTable="columnTongGTGC" msprop:Generator_ColumnPropNameInRow="TongGTGC" msprop:Generator_ColumnPropNameInTable="TongGTGCColumn" msprop:Generator_UserColumnName="TongGTGC" type="xs:int" minOccurs="0" />
+              <xs:element name="Thang" msprop:Generator_ColumnVarNameInTable="columnThang" msprop:Generator_ColumnPropNameInRow="Thang" msprop:Generator_ColumnPropNameInTable="ThangColumn" msprop:Generator_UserColumnName="Thang" type="xs:int" minOccurs="0" />
+              <xs:element name="Nam" msprop:Generator_ColumnVarNameInTable="columnNam" msprop:Generator_ColumnPropNameInRow="Nam" msprop:Generator_ColumnPropNameInTable="NamColumn" msprop:Generator_UserColumnName="Nam" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
